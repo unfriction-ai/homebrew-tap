@@ -14,7 +14,7 @@ Requires [Homebrew](https://brew.sh/) on macOS. The formula supports **Apple Sil
 brew install unfriction-ai/tap/unfriction
 ```
 
-Version **0.1.0** has been installed successfully via this tap. Verify your own installation with:
+The initial published formula targets version **0.1.0**. Verify your installed version with:
 
 ```sh
 unfriction --version
