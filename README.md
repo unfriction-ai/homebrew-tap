@@ -2,7 +2,7 @@
 
 Install **unfriction**, a command-line tool for inspecting recorded AI coding-agent executions, on macOS.
 
-unfriction helps engineers understand agent task execution and context acquisition. Supported trace formats and inspection capabilities evolve between releases; check [release notes](https://github.com/unfriction-ai/unfriction-releases/releases/latest) for changes and `unfriction inspect --help` for usage supported by your installed version.
+unfriction is being developed to make agent task execution and context acquisition observable. Supported trace formats and inspection capabilities evolve between releases; check [release notes](https://github.com/unfriction-ai/unfriction-releases/releases/latest) for changes and `unfriction inspect --help` for usage supported by your installed version.
 
 This repository maintains the [Homebrew formula](Formula/unfriction.rb). Public binary archives and checksums are published separately in [unfriction-releases](https://github.com/unfriction-ai/unfriction-releases).
 
