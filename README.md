@@ -1,10 +1,10 @@
 # unfriction — Homebrew tap
 
-Install **unfriction**, an experimental command-line tool for inspecting recorded AI coding-agent runs, on macOS.
+Install **unfriction**, a command-line tool for inspecting recorded AI coding-agent executions, on macOS.
 
-The current walking skeleton inspects **one Codex turn without tool calls**. It displays the task, final response, and execution state. `COMPLETED` means the agent's execution ended normally; it **does not** mean the engineering task was verified as successful.
+unfriction helps engineers understand agent task execution and context acquisition. Supported trace formats and inspection capabilities evolve between releases; check [release notes](https://github.com/unfriction-ai/unfriction-releases/releases/latest) for changes and `unfriction inspect --help` for usage supported by your installed version.
 
-This repository contains the [Homebrew formula](Formula/unfriction.rb), not the application source or compiled binaries. Public versioned archives and checksums are published in [unfriction-releases](https://github.com/unfriction-ai/unfriction-releases).
+This repository maintains the [Homebrew formula](Formula/unfriction.rb). Public binary archives and checksums are published separately in [unfriction-releases](https://github.com/unfriction-ai/unfriction-releases).
 
 ## Install
 
@@ -12,11 +12,6 @@ Requires [Homebrew](https://brew.sh/) on macOS. The formula supports **Apple Sil
 
 ```sh
 brew install unfriction-ai/tap/unfriction
-```
-
-The initial published formula targets version **0.1.0**. Verify your installed version with:
-
-```sh
 unfriction --version
 brew test unfriction-ai/tap/unfriction
 ```
@@ -24,12 +19,11 @@ brew test unfriction-ai/tap/unfriction
 ## Inspect a recorded run
 
 ```sh
-unfriction inspect /path/to/codex-turn.jsonl
+unfriction inspect --help
+unfriction inspect /path/to/supported-trace.jsonl
 ```
 
-The current input contract supports a single Codex rollout turn, with a task and final response, **without tool calls**. A final response without a matching completion event is reported as `INCOMPLETE`; malformed or unsupported input returns an error.
-
-The CLI inspects a trace you provide. Public release archives do **not** include private development fixtures.
+Check the help output for your installed version's input contract and limitations. The CLI inspects a trace you provide; public release archives do **not** include private development fixtures. Execution completion should not be confused with independently verified engineering success.
 
 ## Update or remove
 
@@ -45,8 +39,9 @@ brew untap unfriction-ai/tap
 
 ## Distribution and source
 
-- [Homebrew formula](Formula/unfriction.rb) — install recipe, artifact URLs, and SHA-256 values for both macOS architectures.
-- [GitHub Releases](https://github.com/unfriction-ai/unfriction-releases/releases) — public versioned binaries and checksum file.
-- [Release repository README](https://github.com/unfriction-ai/unfriction-releases#readme) — direct-download and checksum guidance.
+- [Homebrew formula](Formula/unfriction.rb) — install recipe, download URLs, and SHA-256 checksums for the supported macOS architectures.
+- [Latest release notes](https://github.com/unfriction-ai/unfriction-releases/releases/latest) — changes in the latest published release.
+- [All GitHub Releases](https://github.com/unfriction-ai/unfriction-releases/releases) — versioned binaries and checksum files.
+- [Release repository documentation](https://github.com/unfriction-ai/unfriction-releases#readme) — direct downloads and checksum verification.
 
-The application source is in a separate **private** repository. Installing via Homebrew downloads public release artifacts and needs neither access to the private repository nor GitHub authentication.
+The application source is maintained in a separate **private** repository. Homebrew installs public release binaries without requiring access to that repository or GitHub authentication.
