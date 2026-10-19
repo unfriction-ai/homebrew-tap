@@ -1,16 +1,16 @@
 class Unfriction < Formula
   desc "Inspect recorded coding-agent runs"
   homepage "https://github.com/unfriction-ai/unfriction-releases"
-  version "0.2.3"
+  version "0.3.0"
   depends_on :macos
 
   on_arm do
-    url "https://github.com/unfriction-ai/unfriction-releases/releases/download/v0.2.3/unfriction_0.2.3_darwin_arm64.tar.gz"
-    sha256 "4517636821ca267815cff88622f8769a20e529fdcdaf23cf6942b61a18078465"
+    url "https://github.com/unfriction-ai/unfriction-releases/releases/download/v0.3.0/unfriction_0.3.0_darwin_arm64.tar.gz"
+    sha256 "844d01c6c5fe046ae2185fc62c6c9d8d39a6a2bc22ae8ea7cee0db35ef0b610e"
   end
   on_intel do
-    url "https://github.com/unfriction-ai/unfriction-releases/releases/download/v0.2.3/unfriction_0.2.3_darwin_amd64.tar.gz"
-    sha256 "4c8f937937954145884d06a629ad45b11912b0246ab01bb4bf8e83cac30cfa2d"
+    url "https://github.com/unfriction-ai/unfriction-releases/releases/download/v0.3.0/unfriction_0.3.0_darwin_amd64.tar.gz"
+    sha256 "ed9a132ef50b76fade342d2a20946efc97e22c9f23e23366b9dc3549fc102f62"
   end
 
   def install
